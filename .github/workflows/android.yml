@@ -1,0 +1,40 @@
+name: Android Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Add execute mode to Gradle
+        run: chmod +x gradlew
+
+      - name: Use Gradle cache
+        uses: actions/cache@v1
+        with:
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+          restore-keys: ${{ runner.os }}-gradle-
+
+      - name: Build with Gradle
+        run: ./gradlew build
+
+      - name: Upload Android Lint reports
+        uses: actions/upload-artifact@v1
+        with:
+          name: Android Lint reports
+          path: app/build/reports
+
+      - name: Upload JUnit reports
+        uses: actions/upload-artifact@v1
+        with:
+          name: JUnit reports
+          path: app/build/test-results
