@@ -7,8 +7,8 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="io.github.proudust.stickymemo.ui.main.MainFragment"
+        android:name="io.github.proudust.stickymemo.ui.main.ListFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/main_fragment" />
+        tools:layout="@layout/list_fragment" />
 
 </navigation>
