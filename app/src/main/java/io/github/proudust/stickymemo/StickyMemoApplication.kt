@@ -13,6 +13,7 @@ class StickyMemoApplication : Application() {
         startKoin {
             androidContext(this@StickyMemoApplication)
             androidLogger()
+            modules(dataBaseModules)
             modules(applicationModules)
         }
     }
