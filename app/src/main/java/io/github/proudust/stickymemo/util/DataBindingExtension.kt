@@ -1,4 +1,4 @@
-package io.github.proudust.helloworld.util
+package io.github.proudust.stickymemo.util
 
 import android.view.ViewGroup
 import androidx.annotation.MainThread

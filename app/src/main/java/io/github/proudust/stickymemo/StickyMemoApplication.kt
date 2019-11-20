@@ -1,17 +1,17 @@
-package io.github.proudust.helloworld
+package io.github.proudust.stickymemo
 
 import android.app.Application
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 
-class HelloWorldApplication : Application() {
+class StickyMemoApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
 
         startKoin {
-            androidContext(this@HelloWorldApplication)
+            androidContext(this@StickyMemoApplication)
             androidLogger()
             modules(applicationModules)
         }

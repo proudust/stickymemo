@@ -1,4 +1,4 @@
-package io.github.proudust.helloworld
+package io.github.proudust.stickymemo
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

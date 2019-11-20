@@ -1,4 +1,4 @@
-package io.github.proudust.helloworld
+package io.github.proudust.stickymemo
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

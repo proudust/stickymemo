@@ -1,6 +1,6 @@
-package io.github.proudust.helloworld
+package io.github.proudust.stickymemo
 
-import io.github.proudust.helloworld.ui.main.MainViewModel
+import io.github.proudust.stickymemo.ui.main.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

@@ -1,4 +1,4 @@
-package io.github.proudust.helloworld
+package io.github.proudust.stickymemo
 
 import android.os.Build
 import org.junit.Test
@@ -9,7 +9,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 
 @RunWith(RobolectricTestRunner::class)
-@Config(application = HelloWorldApplication::class, sdk = [Build.VERSION_CODES.P])
+@Config(application = StickyMemoApplication::class, sdk = [Build.VERSION_CODES.P])
 class ApplicationModulesTest : AutoCloseKoinTest() {
 
     @Test

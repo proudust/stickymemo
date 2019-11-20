@@ -1,4 +1,4 @@
-package io.github.proudust.helloworld.ui.main
+package io.github.proudust.stickymemo.ui.main
 
 import androidx.lifecycle.ViewModel
 

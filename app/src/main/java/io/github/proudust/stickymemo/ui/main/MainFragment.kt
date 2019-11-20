@@ -1,10 +1,10 @@
-package io.github.proudust.helloworld.ui.main
+package io.github.proudust.stickymemo.ui.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import io.github.proudust.helloworld.R
-import io.github.proudust.helloworld.databinding.MainFragmentBinding
-import io.github.proudust.helloworld.util.dataBinding
+import io.github.proudust.stickymemo.R
+import io.github.proudust.stickymemo.databinding.MainFragmentBinding
+import io.github.proudust.stickymemo.util.dataBinding
 import org.koin.android.ext.android.inject
 
 class MainFragment : Fragment(R.layout.main_fragment) {
