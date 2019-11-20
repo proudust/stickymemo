@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -11,6 +12,11 @@ android {
         versionCode 1
         versionName '1.0'
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        javaCompileOptions.annotationProcessorOptions.arguments = [
+            'room.schemaLocation'  : "$projectDir/schemas".toString(),
+            'room.incremental'     : 'true',
+            'room.expandProjection': 'true'
+        ]
     }
     buildTypes {
         release {
@@ -37,8 +43,10 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.1.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.1.0'
+    implementation 'androidx.room:room-ktx:2.2.1'
     implementation 'com.google.android.material:material:1.1.0-beta02'
     implementation 'org.koin:koin-androidx-viewmodel:2.0.1'
+    kapt 'androidx.room:room-compiler:2.2.1'
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0-beta-3'
     debugImplementation 'com.willowtreeapps.hyperion:hyperion-core:0.9.27'
     debugImplementation 'com.willowtreeapps.hyperion:hyperion-attr:0.9.27'
