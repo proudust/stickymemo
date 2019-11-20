@@ -18,3 +18,14 @@ class ApplicationModulesTest : AutoCloseKoinTest() {
     }
 
 }
+
+@RunWith(RobolectricTestRunner::class)
+@Config(application = StickyMemoApplication::class, sdk = [Build.VERSION_CODES.P])
+class TestModulesTest : AutoCloseKoinTest() {
+
+    @Test
+    fun `check koin modules definitions`() {
+        getKoin().checkModules()
+    }
+
+}
